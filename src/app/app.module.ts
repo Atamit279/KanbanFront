@@ -9,7 +9,6 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {HttpClientModule} from "@angular/common/http";
 import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
-import { LevelComponent } from './MainCommponent/play-area/level/level.component';
 import {KanbanModule} from "@syncfusion/ej2-angular-kanban";
 import {DragDropModule} from "@angular/cdk/drag-drop";
 import {MatDialogModule} from "@angular/material/dialog";
@@ -28,7 +27,6 @@ import {TextareaAutosizeModule} from "ngx-textarea-autosize";
   declarations: [
     AppComponent,
     TaskComponent,
-    LevelComponent,
     DialogComponent,
     DialogTaskComponent
   ],
