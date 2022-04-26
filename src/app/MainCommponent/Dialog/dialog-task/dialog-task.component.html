@@ -1,0 +1,53 @@
+<div>
+  <form [formGroup]="form">
+    <div>
+      <mat-form-field class="display-column"  appearance="fill">
+        <mat-label >Task Name</mat-label>
+        <input matInput  type="text"  formControlName = "name" >
+        <mat-error>
+          {{'Min length name 4 symbols'}}
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="display-column" appearance="fill" >
+        <mat-label>Description</mat-label>
+        <textarea matInput  type="text" formControlName="description" cdkTextareaAutosize></textarea>
+        <mat-error>
+          {{'Min length description 2 symbols'}}
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+
+
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Select Priority</mat-label>
+        <mat-select  formControlName = "priority" >
+          <mat-option value="Low">Low</mat-option>
+          <mat-option value="Medium">Medium</mat-option>
+          <mat-option value="Epic">Epic</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Select Status</mat-label>
+        <mat-select  formControlName = "status" >
+          <mat-option value="Todo">Todo</mat-option>
+          <mat-option value="InProgress">In Progress</mat-option>
+          <mat-option value="Done">Done</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="control-buttons">
+      <button  mat-stroked-button mat-dialog-close color="primary" (click)="test()"  [disabled]="form.invalid" >
+        Save Edit
+      </button>
+      <button  mat-stroked-button mat-dialog-close color="primary" (click)="deleteById()">
+        Delete
+      </button>
+    </div>
+  </form>
+</div>
